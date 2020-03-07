@@ -11,12 +11,14 @@ static const char col_cyan[]        = "#5E8D87";
 static const char col_black[]       = "#282A2E";
 static const char col_bblack[]      = "#373B41";
 static const char col_white[]       = "#707880";
+static const char col_bwhite[]      = "#C5C8C6";
 static const char col_bcyan[]       = "#8ABEB7";
+static const char col_green[]       = "#8C9440";
 static const int  gappx             = 20;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
-	[SchemeNorm] = { col_white, col_black, col_black },
-	[SchemeSel]  = { col_white, col_bblack,  col_cyan  },
+	[SchemeNorm] = { col_bwhite, col_bblack, col_black },
+	[SchemeSel]  = { col_green, col_black, col_green  },
 };
 
 /* tagging */
