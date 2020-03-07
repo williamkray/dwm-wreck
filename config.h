@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "monospace:size=10" };
+static const char *fonts[]          = { "Deja Vu Sans Mono:style=book:size=10" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_cyan[]        = "#5E8D87";
 static const char col_black[]       = "#282A2E";
