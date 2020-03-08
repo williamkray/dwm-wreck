@@ -65,11 +65,12 @@ static const char *lockcmd[] = { "screen-locker.sh", NULL };
 static const char *browsecmd[] = { "firefox", NULL };
 static const char *prntselcmd[] = { "screencap.sh", "some", NULL };
 static const char *prntallcmd[] = { "screencap.sh", "all", NULL };
-static const char *volupcmd[] = { "pulsectl.sh", "up", NULL};
-static const char *voldncmd[] = { "pulsectl.sh", "down", NULL};
-static const char *voltglcmd[] = { "pulsectl.sh", "toggle", NULL};
-static const char *brtnessupcmd[] = { "light", "-A", "5", NULL};
-static const char *brtnessdncmd[] = { "light", "-U", "5", NULL};
+static const char *volupcmd[] = { "pulsectl.sh", "up", NULL };
+static const char *voldncmd[] = { "pulsectl.sh", "down", NULL };
+static const char *voltglcmd[] = { "pulsectl.sh", "toggle", NULL };
+static const char *brtnessupcmd[] = { "light", "-A", "5", NULL };
+static const char *brtnessdncmd[] = { "light", "-U", "5", NULL };
+static const char *micmutecmd[] = { "pulse-mic-mute.sh", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -84,6 +85,7 @@ static Key keys[] = {
   { NULL,                         0x1008ff12,  spawn,        {.v = voltglcmd } },
   { NULL,                         0x1008ff03,  spawn,        {.v = brtnessdncmd } },
   { NULL,                         0x1008ff02,  spawn,        {.v = brtnessupcmd } },
+  { NULL,                         0x1008ffb2,  spawn,        {.v = micmutecmd } },
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
