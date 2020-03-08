@@ -62,12 +62,18 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "rofi", "-modi", "drun,run", "-show", "drun", "-monitor", "primary", "-show-icons", "-sidebar-mode", NULL };
 static const char *termcmd[]  = { "st", "-e", "tmux.sh", NULL };
 static const char *lockcmd[] = { "screen-locker.sh", NULL };
+static const char *browsecmd[] = { "firefox", NULL };
+static const char *prntselcmd[] = { "screencap.sh", "some", NULL };
+static const char *prntallcmd[] = { "screencap.sh", "all", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
   { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
+  { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsecmd } },
+  { NULL,                         XK_Print,  spawn,          {.v = prntallcmd } },
+  { ShiftMask,                    XK_Print,  spawn,          {.v = prntselcmd } },
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
