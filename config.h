@@ -65,6 +65,9 @@ static const char *lockcmd[] = { "screen-locker.sh", NULL };
 static const char *browsecmd[] = { "firefox", NULL };
 static const char *prntselcmd[] = { "screencap.sh", "some", NULL };
 static const char *prntallcmd[] = { "screencap.sh", "all", NULL };
+static const char *volupcmd[] = { "pulsectl.sh", "up", NULL};
+static const char *voldncmd[] = { "pulsectl.sh", "down", NULL};
+static const char *voltglcmd[] = { "pulsectl.sh", "toggle", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -74,6 +77,9 @@ static Key keys[] = {
   { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsecmd } },
   { NULL,                         XK_Print,  spawn,          {.v = prntallcmd } },
   { ShiftMask,                    XK_Print,  spawn,          {.v = prntselcmd } },
+  { NULL,                         0x1008ff13, spawn,         {.v = volupcmd } },
+  { NULL,                         0x1008ff11, spawn,         {.v = voldncmd } },
+  { NULL,                         0x1008ff12,  spawn,        {.v = voltglcmd } },
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
