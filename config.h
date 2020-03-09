@@ -82,14 +82,14 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
   { MODKEY|ShiftMask,             XK_l,      spawn,          {.v = lockcmd } },
   { MODKEY|ShiftMask,             XK_w,      spawn,          {.v = browsecmd } },
-  { NULL,                         XK_Print,  spawn,          {.v = prntallcmd } },
+  { 0,                         XK_Print,  spawn,          {.v = prntallcmd } },
   { ShiftMask,                    XK_Print,  spawn,          {.v = prntselcmd } },
-  { NULL,                         0x1008ff13, spawn,         {.v = volupcmd } },
-  { NULL,                         0x1008ff11, spawn,         {.v = voldncmd } },
-  { NULL,                         0x1008ff12,  spawn,        {.v = voltglcmd } },
-  { NULL,                         0x1008ff03,  spawn,        {.v = brtnessdncmd } },
-  { NULL,                         0x1008ff02,  spawn,        {.v = brtnessupcmd } },
-  { NULL,                         0x1008ffb2,  spawn,        {.v = micmutecmd } },
+  { 0,                         0x1008ff13, spawn,         {.v = volupcmd } },
+  { 0,                         0x1008ff11, spawn,         {.v = voldncmd } },
+  { 0,                         0x1008ff12,  spawn,        {.v = voltglcmd } },
+  { 0,                         0x1008ff03,  spawn,        {.v = brtnessdncmd } },
+  { 0,                         0x1008ff02,  spawn,        {.v = brtnessupcmd } },
+  { 0,                         0x1008ffb2,  spawn,        {.v = micmutecmd } },
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
@@ -118,11 +118,6 @@ static Key keys[] = {
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
 	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
 };
 
