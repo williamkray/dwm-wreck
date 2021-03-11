@@ -79,6 +79,9 @@ static const char *voltglcmd[] = { "pulsectl.sh", "toggle", NULL };
 static const char *brtnessupcmd[] = { "light", "-A", "5", NULL };
 static const char *brtnessdncmd[] = { "light", "-U", "5", NULL };
 static const char *micmutecmd[] = { "pulse-mic-mute.sh", NULL };
+static const char *cmustogglecmd[] = { "cmus-ctl.sh", "toggle", NULL };
+static const char *cmusnextcmd[] = { "cmus-ctl.sh", "next", NULL };
+static const char *cmusprevcmd[] = { "cmus-ctl.sh", "prev", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -95,6 +98,9 @@ static Key keys[] = {
   { 0,                            0x1008ff02, spawn,         {.v = brtnessupcmd } },
   { 0,                            0x1008ffb2, spawn,         {.v = micmutecmd } },
   { 0,                            XK_F4,     spawn,          {.v = micmutecmd } },
+  { 0,                            0x1008ff14, spawn,         {.v = cmustogglecmd } },
+  { 0,                            0x1008ff17, spawn,         {.v = cmusnextcmd } },
+  { 0,                            0x1008ff16, spawn,         {.v = cmusprevcmd } },
   { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
   { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
   { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
